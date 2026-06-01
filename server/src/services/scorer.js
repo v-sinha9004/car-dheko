@@ -5,7 +5,7 @@ function scorePriceFit(price, budget) {
   if (ratio > 1) return 0;
   const ideal = 0.8;
   const distance = Math.abs(ratio - ideal);
-  return Math.max(0, 25 * (1 - distance / 0.5));
+  return Math.max(0, 48 * (1 - distance / 0.5));
 }
 
 function scoreFuel(car, prefs) {
@@ -14,8 +14,8 @@ function scoreFuel(car, prefs) {
 }
 
 function scoreTransmission(car, prefs) {
-  if (prefs.transmission === 'Any') return 15;
-  return car.transmission === prefs.transmission ? 15 : 0;
+  if (prefs.transmission === 'Any') return 5;
+  return car.transmission === prefs.transmission ? 5 : 0;
 }
 
 function scoreSafety(car, prefs) {
@@ -27,7 +27,7 @@ function scoreSafety(car, prefs) {
 }
 
 function scoreReviews(car) {
-  return (car.reviewScore / 5) * 15;
+  return (car.reviewScore / 5) * 2;
 }
 
 function scoreMileage(car, prefs) {
