@@ -186,3 +186,4 @@ I deliberately cut:
 - **Database & State:** Move data to PostgreSQL/MongoDB and add user sessions to save past shortlists.
 - **Detailed Views:** Add React Router for dedicated "Car Detail" pages showing full specs, price breakdowns, and user reviews.
 - **Robustness:** More robust fallback UI and graceful degradation if the Gemini API fails entirely or rate limits.
+- **Better searching algorithms:** Spend time on making a more robust and efficient car searching algorithm.
