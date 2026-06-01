@@ -6,7 +6,7 @@ const DEFAULT_PREFS = {
   familySize: 4,
   usage: 'city',
   fuelPreference: 'Petrol',
-  transmission: 'Automatic',
+  transmission: 'Any',
   safetyPriority: true,
   annualRunningKm: 12000,
 };
