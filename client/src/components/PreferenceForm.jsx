@@ -1,13 +1,21 @@
+import { useState } from 'react';
+
 const DEFAULT_PREFS = {
   budget: 1500000,
   familySize: 4,
-  cityDriving: true,
-  highwayDriving: false,
+  usage: 'city',
   fuelPreference: 'Petrol',
   transmission: 'Automatic',
   safetyPriority: true,
   annualRunningKm: 12000,
 };
+
+function drivingFromUsage(usage) {
+  if (usage === 'highway') {
+    return { cityDriving: false, highwayDriving: true };
+  }
+  return { cityDriving: true, highwayDriving: false };
+}
 
 function formatInr(value) {
   return new Intl.NumberFormat('en-IN', {
@@ -18,25 +26,33 @@ function formatInr(value) {
 }
 
 export default function PreferenceForm({ onSubmit, disabled }) {
+  const [budget, setBudget] = useState(DEFAULT_PREFS.budget);
+  const [annualRunningKm, setAnnualRunningKm] = useState(DEFAULT_PREFS.annualRunningKm);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.target);
+    const { cityDriving, highwayDriving } = drivingFromUsage(form.get('usage'));
     onSubmit({
-      budget: Number(form.get('budget')),
+      budget,
       familySize: Number(form.get('familySize')),
-      cityDriving: form.get('cityDriving') === 'on',
-      highwayDriving: form.get('highwayDriving') === 'on',
+      cityDriving,
+      highwayDriving,
       fuelPreference: form.get('fuelPreference'),
       transmission: form.get('transmission'),
       safetyPriority: form.get('safetyPriority') === 'on',
-      annualRunningKm: Number(form.get('annualRunningKm')),
+      annualRunningKm,
     });
   };
 
   const fillDemo = () => {
+    setBudget(DEFAULT_PREFS.budget);
+    setAnnualRunningKm(DEFAULT_PREFS.annualRunningKm);
+
     const form = document.getElementById('preference-form');
     if (!form) return;
     Object.entries(DEFAULT_PREFS).forEach(([key, val]) => {
+      if (key === 'budget' || key === 'annualRunningKm') return;
       const el = form.elements[key];
       if (!el) return;
       if (el.type === 'checkbox') el.checked = val;
@@ -53,13 +69,13 @@ export default function PreferenceForm({ onSubmit, disabled }) {
           onClick={fillDemo}
           className="text-sm text-indigo-600 hover:text-indigo-800"
         >
-          Fill demo
+          Reset
         </button>
       </div>
 
       <div>
         <label className="block text-sm font-medium text-slate-700 mb-1">
-          Budget: <span id="budget-label">{formatInr(DEFAULT_PREFS.budget)}</span>
+          Budget: <span>{formatInr(budget)}</span>
         </label>
         <input
           type="range"
@@ -67,11 +83,9 @@ export default function PreferenceForm({ onSubmit, disabled }) {
           min={500000}
           max={5000000}
           step={50000}
-          defaultValue={DEFAULT_PREFS.budget}
+          value={budget}
           className="w-full accent-indigo-600"
-          onChange={(e) => {
-            document.getElementById('budget-label').textContent = formatInr(Number(e.target.value));
-          }}
+          onChange={(e) => setBudget(Number(e.target.value))}
         />
       </div>
 
@@ -98,15 +112,12 @@ export default function PreferenceForm({ onSubmit, disabled }) {
             min={5000}
             max={50000}
             step={1000}
-            defaultValue={DEFAULT_PREFS.annualRunningKm}
+            value={annualRunningKm}
             className="w-full accent-indigo-600"
-            onChange={(e) => {
-              const el = document.getElementById('km-label');
-              if (el) el.textContent = `${Number(e.target.value).toLocaleString()} km/yr`;
-            }}
+            onChange={(e) => setAnnualRunningKm(Number(e.target.value))}
           />
-          <span id="km-label" className="text-sm text-slate-500">
-            {DEFAULT_PREFS.annualRunningKm.toLocaleString()} km/yr
+          <span className="text-sm text-slate-500">
+            {annualRunningKm.toLocaleString()} km/yr
           </span>
         </div>
       </div>
@@ -141,36 +152,30 @@ export default function PreferenceForm({ onSubmit, disabled }) {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-6">
-        <label className="flex items-center gap-2 cursor-pointer">
-          <input
-            type="checkbox"
-            name="cityDriving"
-            defaultChecked={DEFAULT_PREFS.cityDriving}
-            className="rounded accent-indigo-600"
-          />
-          <span className="text-sm text-slate-700">Mostly city driving</span>
-        </label>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label className="block text-sm font-medium text-slate-700 mb-1">Usage</label>
+          <select
+            name="usage"
+            defaultValue={DEFAULT_PREFS.usage}
+            className="w-full rounded-lg border border-slate-300 px-3 py-2"
+          >
+            <option value="city">Mostly city driving</option>
+            <option value="highway">Highway driving</option>
+          </select>
+        </div>
 
-        <label className="flex items-center gap-2 cursor-pointer">
-          <input
-            type="checkbox"
-            name="highwayDriving"
-            defaultChecked={DEFAULT_PREFS.highwayDriving}
-            className="rounded accent-indigo-600"
-          />
-          <span className="text-sm text-slate-700">Highway driving</span>
-        </label>
-
-        <label className="flex items-center gap-2 cursor-pointer">
-          <input
-            type="checkbox"
-            name="safetyPriority"
-            defaultChecked={DEFAULT_PREFS.safetyPriority}
-            className="rounded accent-indigo-600"
-          />
-          <span className="text-sm text-slate-700">Safety is a priority</span>
-        </label>
+        <div className="flex items-center h-full">
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="checkbox"
+              name="safetyPriority"
+              defaultChecked={DEFAULT_PREFS.safetyPriority}
+              className="rounded accent-indigo-600 shrink-0"
+            />
+            <span className="text-sm text-slate-700">Safety is a priority</span>
+          </label>
+        </div>
       </div>
 
       <button
