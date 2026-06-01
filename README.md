@@ -76,6 +76,10 @@ npm run dev --prefix client
 
 Returns all cars in the dataset.
 
+### `GET /api/cars/makes`
+
+Returns sorted unique brand/make names from the dataset.
+
 ### `POST /api/recommend`
 
 **Request:**
@@ -89,9 +93,12 @@ Returns all cars in the dataset.
   "fuelPreference": "Petrol",
   "transmission": "Automatic",
   "safetyPriority": true,
-  "annualRunningKm": 12000
+  "annualRunningKm": 12000,
+  "brands": ["Maruti", "Hyundai", "Tata"]
 }
 ```
+
+`brands` is optional. Omit it or send `[]` to include all makes. When set, only cars from those makes are scored and recommended.
 
 **Response:** Gemini-structured JSON with `summary`, `recommendations` (3 items), `comparison`, and `followUpQuestions`.
 
@@ -114,7 +121,7 @@ curl -X POST http://localhost:3001/api/recommend \
 
 ## Design Choices
 
-- **Rule-based pre-filter:** Keeps Gemini context small, reduces hallucinated car IDs, and ensures budget/fuel/transmission constraints are enforced.
+- **Rule-based pre-filter:** Keeps Gemini context small, reduces hallucinated car IDs, and ensures budget, brand, fuel, and transmission constraints are enforced.
 - **Hybrid scoring:** Deterministic weights for price fit, safety, reviews, mileage vs usage; Gemini adds narrative ranking and trade-off analysis.
 - **JSON-only Gemini output:** `responseMimeType: application/json` plus server-side validation and one retry.
 

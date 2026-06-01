@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { getMakes } from '../api/client.js';
 
 const DEFAULT_PREFS = {
   budget: 1500000,
@@ -28,6 +29,27 @@ function formatInr(value) {
 export default function PreferenceForm({ onSubmit, disabled }) {
   const [budget, setBudget] = useState(DEFAULT_PREFS.budget);
   const [annualRunningKm, setAnnualRunningKm] = useState(DEFAULT_PREFS.annualRunningKm);
+  const [makes, setMakes] = useState([]);
+  const [selectedBrands, setSelectedBrands] = useState(new Set());
+  const [brandsExpanded, setBrandsExpanded] = useState(false);
+
+  useEffect(() => {
+    getMakes()
+      .then((data) => setMakes(data.makes ?? []))
+      .catch(() => setMakes([]));
+  }, []);
+
+  const toggleBrand = (make) => {
+    setSelectedBrands((prev) => {
+      const next = new Set(prev);
+      if (next.has(make)) next.delete(make);
+      else next.add(make);
+      return next;
+    });
+  };
+
+  const selectAllBrands = () => setSelectedBrands(new Set(makes));
+  const clearBrands = () => setSelectedBrands(new Set());
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -42,12 +64,15 @@ export default function PreferenceForm({ onSubmit, disabled }) {
       transmission: form.get('transmission'),
       safetyPriority: form.get('safetyPriority') === 'on',
       annualRunningKm,
+      brands: [...selectedBrands],
     });
   };
 
   const fillDemo = () => {
     setBudget(DEFAULT_PREFS.budget);
     setAnnualRunningKm(DEFAULT_PREFS.annualRunningKm);
+    setSelectedBrands(new Set());
+    setBrandsExpanded(false);
 
     const form = document.getElementById('preference-form');
     if (!form) return;
@@ -176,6 +201,76 @@ export default function PreferenceForm({ onSubmit, disabled }) {
             <span className="text-sm text-slate-700">Safety is a priority</span>
           </label>
         </div>
+      </div>
+
+      <div className="rounded-lg border border-slate-300 overflow-hidden">
+        <button
+          type="button"
+          onClick={() => setBrandsExpanded((open) => !open)}
+          aria-expanded={brandsExpanded}
+          className="w-full flex items-center justify-between gap-2 px-3 py-2.5 text-left bg-slate-50 hover:bg-slate-100 transition"
+        >
+          <span className="text-sm font-medium text-slate-700">
+            Brands{' '}
+            <span className="font-normal text-slate-500">
+              {selectedBrands.size === 0
+                ? '(all brands)'
+                : `(${selectedBrands.size} selected)`}
+            </span>
+          </span>
+          <span
+            className={`text-slate-500 text-xs shrink-0 transition-transform ${brandsExpanded ? 'rotate-180' : ''}`}
+            aria-hidden
+          >
+            ▼
+          </span>
+        </button>
+
+        {brandsExpanded && (
+          <div className="border-t border-slate-300 p-3 space-y-2">
+            <div className="flex justify-end gap-3 text-sm">
+              <button
+                type="button"
+                onClick={selectAllBrands}
+                disabled={makes.length === 0}
+                className="text-indigo-600 hover:text-indigo-800 disabled:opacity-50"
+              >
+                Select all
+              </button>
+              <button
+                type="button"
+                onClick={clearBrands}
+                disabled={selectedBrands.size === 0}
+                className="text-indigo-600 hover:text-indigo-800 disabled:opacity-50"
+              >
+                Clear
+              </button>
+            </div>
+            <div className="max-h-40 overflow-y-auto grid grid-cols-2 sm:grid-cols-3 gap-2">
+              {makes.length === 0 ? (
+                <p className="text-sm text-slate-500 col-span-full">Loading brands…</p>
+              ) : (
+                makes.map((make) => (
+                  <label
+                    key={make}
+                    className="flex items-center gap-2 cursor-pointer text-sm text-slate-700"
+                  >
+                    <input
+                      type="checkbox"
+                      checked={selectedBrands.has(make)}
+                      onChange={() => toggleBrand(make)}
+                      className="rounded accent-indigo-600 shrink-0"
+                    />
+                    <span>{make}</span>
+                  </label>
+                ))
+              )}
+            </div>
+            <p className="text-xs text-slate-500">
+              Leave none selected to include all brands. Select one or more to limit recommendations.
+            </p>
+          </div>
+        )}
       </div>
 
       <button

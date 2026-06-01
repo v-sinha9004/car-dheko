@@ -14,6 +14,11 @@ export async function getCars() {
   return handleResponse(res);
 }
 
+export async function getMakes() {
+  const res = await fetch('/api/cars/makes');
+  return handleResponse(res);
+}
+
 export async function postRecommend(preferences) {
   const res = await fetch('/api/recommend', {
     method: 'POST',

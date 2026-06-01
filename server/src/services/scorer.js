@@ -61,7 +61,8 @@ function scoreFamily(car, prefs) {
   return 0;
 }
 
-function passesHardFilters(car, prefs) {
+function passesHardFilters(car, prefs, brandFilter) {
+  if (brandFilter && !brandFilter.has(car.make)) return false;
   if (car.price > prefs.budget * BUDGET_BUFFER) return false;
   if (car.seats < prefs.familySize) return false;
   if (prefs.fuelPreference !== 'Any' && car.fuelType !== prefs.fuelPreference) {
@@ -75,6 +76,7 @@ function passesHardFilters(car, prefs) {
 
 function buildReasons(car, prefs, breakdown) {
   const reasons = [];
+  if (prefs.brands?.length > 0) reasons.push(`${car.make} brand selected`);
   if (car.price <= prefs.budget) reasons.push('Within budget');
   if (prefs.fuelPreference === 'Any' || car.fuelType === prefs.fuelPreference) {
     reasons.push(`Matches ${prefs.fuelPreference === 'Any' ? 'fuel preference' : prefs.fuelPreference}`);
@@ -93,11 +95,13 @@ function buildReasons(car, prefs, breakdown) {
 }
 
 export function scoreAndRankCars(cars, preferences, topN = 10) {
-  const filtered = cars.filter((car) => passesHardFilters(car, preferences));
+  const brandFilter =
+    preferences.brands?.length > 0 ? new Set(preferences.brands) : null;
+  const filtered = cars.filter((car) => passesHardFilters(car, preferences, brandFilter));
 
   if (filtered.length < 3) {
     const err = new Error(
-      'Not enough cars match your filters. Try increasing budget, lowering family size, or setting fuel/transmission to Any.'
+      'Not enough cars match your filters. Try increasing budget, selecting more brands, lowering family size, or setting fuel/transmission to Any.'
     );
     err.status = 400;
     throw err;

@@ -1,3 +1,5 @@
+import { getAllMakes } from '../services/carLoader.js';
+
 const FUEL_TYPES = ['Petrol', 'Diesel', 'Electric', 'Hybrid', 'Any'];
 const TRANSMISSIONS = ['Automatic', 'Manual', 'Any'];
 
@@ -40,6 +42,28 @@ export function validatePreferences(body) {
     errors.push('safetyPriority must be a boolean');
   }
 
+  let brands = [];
+  if (body.brands !== undefined && body.brands !== null) {
+    if (!Array.isArray(body.brands)) {
+      errors.push('brands must be an array of make names');
+    } else {
+      const validMakes = new Set(getAllMakes());
+      const seen = new Set();
+      for (const brand of body.brands) {
+        if (typeof brand !== 'string' || !brand.trim()) {
+          errors.push('each brand must be a non-empty string');
+          break;
+        }
+        if (!validMakes.has(brand)) {
+          errors.push(`unknown brand: ${brand}`);
+          break;
+        }
+        seen.add(brand);
+      }
+      brands = [...seen];
+    }
+  }
+
   if (errors.length > 0) {
     const err = new Error('Validation failed');
     err.status = 400;
@@ -56,5 +80,6 @@ export function validatePreferences(body) {
     transmission: body.transmission,
     safetyPriority: body.safetyPriority,
     annualRunningKm: body.annualRunningKm,
+    brands,
   };
 }

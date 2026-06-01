@@ -1,7 +1,11 @@
 import { Router } from 'express';
-import { getAllCars } from '../services/carLoader.js';
+import { getAllCars, getAllMakes } from '../services/carLoader.js';
 
 const router = Router();
+
+router.get('/makes', (_req, res) => {
+  res.json({ makes: getAllMakes() });
+});
 
 router.get('/', (_req, res) => {
   const cars = getAllCars();
