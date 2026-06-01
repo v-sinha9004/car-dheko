@@ -17,7 +17,7 @@ React (Vite) → Express API → cars.json + scorer → top 10 → Gemini → st
 
 - **Frontend:** React, Vite, Tailwind CSS v4
 - **Backend:** Node.js, Express (ESM)
-- **Storage:** `server/data/cars.json` (50 Indian market cars)
+- **Storage:** `server/data/cars.json` (100 Indian market cars with `seats` for family-size filtering)
 - **AI:** Google Gemini (auto-fallback across Flash / Flash-Lite models for free tier)
 
 ## Setup

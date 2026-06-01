@@ -56,6 +56,9 @@ export default function RecommendationCard({ recommendation, car, rank }) {
             <span className="px-2 py-1 bg-slate-100 rounded">{car.transmission}</span>
             <span className="px-2 py-1 bg-slate-100 rounded">{car.mileage} km/l</span>
             <span className="px-2 py-1 bg-slate-100 rounded">Safety {car.safetyRating}/5</span>
+            {car.seats != null && (
+              <span className="px-2 py-1 bg-slate-100 rounded">{car.seats}-seater</span>
+            )}
           </div>
         )}
 

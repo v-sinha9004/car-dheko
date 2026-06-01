@@ -9,7 +9,8 @@
     "transmission": "Manual",
     "mileage": 23,
     "safetyRating": 3,
-    "reviewScore": 4.2
+    "reviewScore": 4.2,
+    "seats": 5
   },
   {
     "id": "car_002",
@@ -21,7 +22,8 @@
     "transmission": "Automatic",
     "mileage": 22,
     "safetyRating": 3,
-    "reviewScore": 4.3
+    "reviewScore": 4.3,
+    "seats": 5
   },
   {
     "id": "car_003",
@@ -33,7 +35,8 @@
     "transmission": "Automatic",
     "mileage": 22,
     "safetyRating": 4,
-    "reviewScore": 4.4
+    "reviewScore": 4.4,
+    "seats": 5
   },
   {
     "id": "car_004",
@@ -45,7 +48,8 @@
     "transmission": "Automatic",
     "mileage": 20,
     "safetyRating": 4,
-    "reviewScore": 4.3
+    "reviewScore": 4.3,
+    "seats": 5
   },
   {
     "id": "car_005",
@@ -57,7 +61,8 @@
     "transmission": "Automatic",
     "mileage": 19,
     "safetyRating": 4,
-    "reviewScore": 4.4
+    "reviewScore": 4.4,
+    "seats": 5
   },
   {
     "id": "car_006",
@@ -69,7 +74,8 @@
     "transmission": "Automatic",
     "mileage": 27,
     "safetyRating": 5,
-    "reviewScore": 4.5
+    "reviewScore": 4.5,
+    "seats": 5
   },
   {
     "id": "car_007",
@@ -81,7 +87,8 @@
     "transmission": "Automatic",
     "mileage": 20,
     "safetyRating": 4,
-    "reviewScore": 4.3
+    "reviewScore": 4.3,
+    "seats": 7
   },
   {
     "id": "car_008",
@@ -93,7 +100,8 @@
     "transmission": "Automatic",
     "mileage": 21,
     "safetyRating": 5,
-    "reviewScore": 4.6
+    "reviewScore": 4.6,
+    "seats": 7
   },
   {
     "id": "car_009",
@@ -105,7 +113,8 @@
     "transmission": "Automatic",
     "mileage": 20,
     "safetyRating": 4,
-    "reviewScore": 4.4
+    "reviewScore": 4.4,
+    "seats": 5
   },
   {
     "id": "car_010",
@@ -117,7 +126,8 @@
     "transmission": "Automatic",
     "mileage": 18,
     "safetyRating": 4,
-    "reviewScore": 4.3
+    "reviewScore": 4.3,
+    "seats": 5
   },
   {
     "id": "car_011",
@@ -129,7 +139,8 @@
     "transmission": "Automatic",
     "mileage": 17,
     "safetyRating": 5,
-    "reviewScore": 4.6
+    "reviewScore": 4.6,
+    "seats": 5
   },
   {
     "id": "car_012",
@@ -141,7 +152,8 @@
     "transmission": "Automatic",
     "mileage": 18,
     "safetyRating": 5,
-    "reviewScore": 4.5
+    "reviewScore": 4.5,
+    "seats": 5
   },
   {
     "id": "car_013",
@@ -153,7 +165,8 @@
     "transmission": "Automatic",
     "mileage": 18,
     "safetyRating": 4,
-    "reviewScore": 4.5
+    "reviewScore": 4.5,
+    "seats": 5
   },
   {
     "id": "car_014",
@@ -165,7 +178,8 @@
     "transmission": "Automatic",
     "mileage": 16,
     "safetyRating": 5,
-    "reviewScore": 4.5
+    "reviewScore": 4.5,
+    "seats": 7
   },
   {
     "id": "car_015",
@@ -177,7 +191,8 @@
     "transmission": "Automatic",
     "mileage": 19,
     "safetyRating": 4,
-    "reviewScore": 4.2
+    "reviewScore": 4.2,
+    "seats": 5
   },
   {
     "id": "car_016",
@@ -189,7 +204,8 @@
     "transmission": "Automatic",
     "mileage": 20,
     "safetyRating": 5,
-    "reviewScore": 4.3
+    "reviewScore": 4.3,
+    "seats": 5
   },
   {
     "id": "car_017",
@@ -201,7 +217,8 @@
     "transmission": "Automatic",
     "mileage": 17,
     "safetyRating": 5,
-    "reviewScore": 4.5
+    "reviewScore": 4.5,
+    "seats": 5
   },
   {
     "id": "car_018",
@@ -213,7 +230,8 @@
     "transmission": "Automatic",
     "mileage": 325,
     "safetyRating": 5,
-    "reviewScore": 4.6
+    "reviewScore": 4.6,
+    "seats": 5
   },
   {
     "id": "car_019",
@@ -225,7 +243,8 @@
     "transmission": "Automatic",
     "mileage": 15,
     "safetyRating": 5,
-    "reviewScore": 4.5
+    "reviewScore": 4.5,
+    "seats": 5
   },
   {
     "id": "car_020",
@@ -237,7 +256,8 @@
     "transmission": "Automatic",
     "mileage": 15,
     "safetyRating": 5,
-    "reviewScore": 4.5
+    "reviewScore": 4.5,
+    "seats": 7
   },
   {
     "id": "car_021",
@@ -249,7 +269,8 @@
     "transmission": "Manual",
     "mileage": 23,
     "safetyRating": 4,
-    "reviewScore": 4.2
+    "reviewScore": 4.2,
+    "seats": 5
   },
   {
     "id": "car_022",
@@ -261,7 +282,8 @@
     "transmission": "Automatic",
     "mileage": 19,
     "safetyRating": 5,
-    "reviewScore": 4.4
+    "reviewScore": 4.4,
+    "seats": 5
   },
   {
     "id": "car_023",
@@ -273,7 +295,8 @@
     "transmission": "Automatic",
     "mileage": 18,
     "safetyRating": 4,
-    "reviewScore": 4.3
+    "reviewScore": 4.3,
+    "seats": 5
   },
   {
     "id": "car_024",
@@ -285,7 +308,8 @@
     "transmission": "Automatic",
     "mileage": 17,
     "safetyRating": 5,
-    "reviewScore": 4.6
+    "reviewScore": 4.6,
+    "seats": 5
   },
   {
     "id": "car_025",
@@ -297,7 +321,8 @@
     "transmission": "Automatic",
     "mileage": 16,
     "safetyRating": 5,
-    "reviewScore": 4.5
+    "reviewScore": 4.5,
+    "seats": 5
   },
   {
     "id": "car_026",
@@ -309,7 +334,8 @@
     "transmission": "Automatic",
     "mileage": 20,
     "safetyRating": 5,
-    "reviewScore": 4.5
+    "reviewScore": 4.5,
+    "seats": 5
   },
   {
     "id": "car_027",
@@ -321,7 +347,8 @@
     "transmission": "Automatic",
     "mileage": 22,
     "safetyRating": 4,
-    "reviewScore": 4.2
+    "reviewScore": 4.2,
+    "seats": 5
   },
   {
     "id": "car_028",
@@ -333,7 +360,8 @@
     "transmission": "Automatic",
     "mileage": 27,
     "safetyRating": 5,
-    "reviewScore": 4.5
+    "reviewScore": 4.5,
+    "seats": 5
   },
   {
     "id": "car_029",
@@ -345,7 +373,8 @@
     "transmission": "Automatic",
     "mileage": 14,
     "safetyRating": 5,
-    "reviewScore": 4.7
+    "reviewScore": 4.7,
+    "seats": 7
   },
   {
     "id": "car_030",
@@ -357,7 +386,8 @@
     "transmission": "Automatic",
     "mileage": 11,
     "safetyRating": 5,
-    "reviewScore": 4.6
+    "reviewScore": 4.6,
+    "seats": 7
   },
   {
     "id": "car_031",
@@ -369,7 +399,8 @@
     "transmission": "Automatic",
     "mileage": 18,
     "safetyRating": 4,
-    "reviewScore": 4.4
+    "reviewScore": 4.4,
+    "seats": 5
   },
   {
     "id": "car_032",
@@ -381,7 +412,8 @@
     "transmission": "Automatic",
     "mileage": 17,
     "safetyRating": 5,
-    "reviewScore": 4.5
+    "reviewScore": 4.5,
+    "seats": 5
   },
   {
     "id": "car_033",
@@ -393,7 +425,8 @@
     "transmission": "Automatic",
     "mileage": 16,
     "safetyRating": 5,
-    "reviewScore": 4.5
+    "reviewScore": 4.5,
+    "seats": 7
   },
   {
     "id": "car_034",
@@ -405,7 +438,8 @@
     "transmission": "Automatic",
     "mileage": 500,
     "safetyRating": 5,
-    "reviewScore": 4.7
+    "reviewScore": 4.7,
+    "seats": 5
   },
   {
     "id": "car_035",
@@ -417,7 +451,8 @@
     "transmission": "Automatic",
     "mileage": 17,
     "safetyRating": 4,
-    "reviewScore": 4.3
+    "reviewScore": 4.3,
+    "seats": 5
   },
   {
     "id": "car_036",
@@ -429,7 +464,8 @@
     "transmission": "Automatic",
     "mileage": 14,
     "safetyRating": 5,
-    "reviewScore": 4.6
+    "reviewScore": 4.6,
+    "seats": 7
   },
   {
     "id": "car_037",
@@ -441,7 +477,8 @@
     "transmission": "Automatic",
     "mileage": 14,
     "safetyRating": 5,
-    "reviewScore": 4.5
+    "reviewScore": 4.5,
+    "seats": 7
   },
   {
     "id": "car_038",
@@ -453,7 +490,8 @@
     "transmission": "Automatic",
     "mileage": 12,
     "safetyRating": 4,
-    "reviewScore": 4.5
+    "reviewScore": 4.5,
+    "seats": 4
   },
   {
     "id": "car_039",
@@ -465,7 +503,8 @@
     "transmission": "Automatic",
     "mileage": 375,
     "safetyRating": 5,
-    "reviewScore": 4.4
+    "reviewScore": 4.4,
+    "seats": 5
   },
   {
     "id": "car_040",
@@ -477,7 +516,8 @@
     "transmission": "Automatic",
     "mileage": 14,
     "safetyRating": 4,
-    "reviewScore": 4.4
+    "reviewScore": 4.4,
+    "seats": 5
   },
   {
     "id": "car_041",
@@ -489,7 +529,8 @@
     "transmission": "Automatic",
     "mileage": 17,
     "safetyRating": 5,
-    "reviewScore": 4.4
+    "reviewScore": 4.4,
+    "seats": 5
   },
   {
     "id": "car_042",
@@ -501,7 +542,8 @@
     "transmission": "Automatic",
     "mileage": 461,
     "safetyRating": 5,
-    "reviewScore": 4.5
+    "reviewScore": 4.5,
+    "seats": 5
   },
   {
     "id": "car_043",
@@ -513,7 +555,8 @@
     "transmission": "Automatic",
     "mileage": 18,
     "safetyRating": 5,
-    "reviewScore": 4.5
+    "reviewScore": 4.5,
+    "seats": 5
   },
   {
     "id": "car_044",
@@ -525,7 +568,8 @@
     "transmission": "Automatic",
     "mileage": 19,
     "safetyRating": 5,
-    "reviewScore": 4.5
+    "reviewScore": 4.5,
+    "seats": 5
   },
   {
     "id": "car_045",
@@ -537,7 +581,8 @@
     "transmission": "Automatic",
     "mileage": 18,
     "safetyRating": 5,
-    "reviewScore": 4.5
+    "reviewScore": 4.5,
+    "seats": 5
   },
   {
     "id": "car_046",
@@ -549,7 +594,8 @@
     "transmission": "Automatic",
     "mileage": 17,
     "safetyRating": 5,
-    "reviewScore": 4.4
+    "reviewScore": 4.4,
+    "seats": 5
   },
   {
     "id": "car_047",
@@ -561,7 +607,8 @@
     "transmission": "Automatic",
     "mileage": 18,
     "safetyRating": 4,
-    "reviewScore": 4.2
+    "reviewScore": 4.2,
+    "seats": 5
   },
   {
     "id": "car_048",
@@ -573,7 +620,8 @@
     "transmission": "Automatic",
     "mileage": 19,
     "safetyRating": 4,
-    "reviewScore": 4.2
+    "reviewScore": 4.2,
+    "seats": 5
   },
   {
     "id": "car_049",
@@ -585,7 +633,8 @@
     "transmission": "Manual",
     "mileage": 19,
     "safetyRating": 4,
-    "reviewScore": 4.1
+    "reviewScore": 4.1,
+    "seats": 5
   },
   {
     "id": "car_050",
@@ -597,6 +646,657 @@
     "transmission": "Automatic",
     "mileage": 14,
     "safetyRating": 5,
-    "reviewScore": 4.5
+    "reviewScore": 4.5,
+    "seats": 5
+  },
+  {
+    "id": "car_051",
+    "make": "Maruti",
+    "model": "XL6",
+    "variant": "Alpha+",
+    "price": 1420000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 20,
+    "safetyRating": 4,
+    "reviewScore": 4.3,
+    "seats": 6
+  },
+  {
+    "id": "car_052",
+    "make": "Maruti",
+    "model": "Jimny",
+    "variant": "Alpha+ AT",
+    "price": 1420000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 16,
+    "safetyRating": 4,
+    "reviewScore": 4.4,
+    "seats": 4
+  },
+  {
+    "id": "car_053",
+    "make": "Toyota",
+    "model": "Rumion",
+    "variant": "S AT",
+    "price": 1180000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 20,
+    "safetyRating": 4,
+    "reviewScore": 4.2,
+    "seats": 7
+  },
+  {
+    "id": "car_054",
+    "make": "Toyota",
+    "model": "Innova Hycross",
+    "variant": "ZXO",
+    "price": 3050000,
+    "fuelType": "Hybrid",
+    "transmission": "Automatic",
+    "mileage": 21,
+    "safetyRating": 5,
+    "reviewScore": 4.7,
+    "seats": 7
+  },
+  {
+    "id": "car_055",
+    "make": "Toyota",
+    "model": "Camry",
+    "variant": "Hybrid",
+    "price": 4850000,
+    "fuelType": "Hybrid",
+    "transmission": "Automatic",
+    "mileage": 25,
+    "safetyRating": 5,
+    "reviewScore": 4.7,
+    "seats": 5
+  },
+  {
+    "id": "car_056",
+    "make": "Toyota",
+    "model": "Vellfire",
+    "variant": "Executive Lounge",
+    "price": 5000000,
+    "fuelType": "Hybrid",
+    "transmission": "Automatic",
+    "mileage": 17,
+    "safetyRating": 5,
+    "reviewScore": 4.8,
+    "seats": 7
+  },
+  {
+    "id": "car_057",
+    "make": "Hyundai",
+    "model": "Tucson",
+    "variant": "Signature AT",
+    "price": 2850000,
+    "fuelType": "Diesel",
+    "transmission": "Automatic",
+    "mileage": 16,
+    "safetyRating": 5,
+    "reviewScore": 4.6,
+    "seats": 5
+  },
+  {
+    "id": "car_058",
+    "make": "Hyundai",
+    "model": "Ioniq 5",
+    "variant": "Long Range",
+    "price": 4990000,
+    "fuelType": "Electric",
+    "transmission": "Automatic",
+    "mileage": 631,
+    "safetyRating": 5,
+    "reviewScore": 4.7,
+    "seats": 5
+  },
+  {
+    "id": "car_059",
+    "make": "Hyundai",
+    "model": "Staria",
+    "variant": "Premium",
+    "price": 4590000,
+    "fuelType": "Diesel",
+    "transmission": "Automatic",
+    "mileage": 14,
+    "safetyRating": 5,
+    "reviewScore": 4.6,
+    "seats": 7
+  },
+  {
+    "id": "car_060",
+    "make": "Tata",
+    "model": "Curvv",
+    "variant": "Empowered+ S",
+    "price": 2190000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 18,
+    "safetyRating": 5,
+    "reviewScore": 4.5,
+    "seats": 5
+  },
+  {
+    "id": "car_061",
+    "make": "Tata",
+    "model": "Punch EV",
+    "variant": "Empowered LR",
+    "price": 1490000,
+    "fuelType": "Electric",
+    "transmission": "Automatic",
+    "mileage": 421,
+    "safetyRating": 5,
+    "reviewScore": 4.4,
+    "seats": 5
+  },
+  {
+    "id": "car_062",
+    "make": "Tata",
+    "model": "Harrier",
+    "variant": "Adventure XTA+",
+    "price": 2990000,
+    "fuelType": "Diesel",
+    "transmission": "Automatic",
+    "mileage": 15,
+    "safetyRating": 5,
+    "reviewScore": 4.6,
+    "seats": 5
+  },
+  {
+    "id": "car_063",
+    "make": "Mahindra",
+    "model": "XUV 3XO",
+    "variant": "AX7 L Turbo",
+    "price": 1450000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 18,
+    "safetyRating": 5,
+    "reviewScore": 4.5,
+    "seats": 5
+  },
+  {
+    "id": "car_064",
+    "make": "Mahindra",
+    "model": "Thar Roxx",
+    "variant": "AX7L",
+    "price": 1750000,
+    "fuelType": "Diesel",
+    "transmission": "Automatic",
+    "mileage": 13,
+    "safetyRating": 5,
+    "reviewScore": 4.6,
+    "seats": 5
+  },
+  {
+    "id": "car_065",
+    "make": "Mahindra",
+    "model": "BE 6",
+    "variant": "Pack Three",
+    "price": 2490000,
+    "fuelType": "Electric",
+    "transmission": "Automatic",
+    "mileage": 489,
+    "safetyRating": 5,
+    "reviewScore": 4.5,
+    "seats": 5
+  },
+  {
+    "id": "car_066",
+    "make": "Mahindra",
+    "model": "Marazzo",
+    "variant": "M8",
+    "price": 1490000,
+    "fuelType": "Diesel",
+    "transmission": "Manual",
+    "mileage": 17,
+    "safetyRating": 4,
+    "reviewScore": 4.2,
+    "seats": 7
+  },
+  {
+    "id": "car_067",
+    "make": "Mahindra",
+    "model": "Bolero Neo Plus",
+    "variant": "P10",
+    "price": 1420000,
+    "fuelType": "Diesel",
+    "transmission": "Manual",
+    "mileage": 16,
+    "safetyRating": 3,
+    "reviewScore": 4,
+    "seats": 7
+  },
+  {
+    "id": "car_068",
+    "make": "MG",
+    "model": "Windsor EV",
+    "variant": "Excite",
+    "price": 2490000,
+    "fuelType": "Electric",
+    "transmission": "Automatic",
+    "mileage": 331,
+    "safetyRating": 5,
+    "reviewScore": 4.5,
+    "seats": 5
+  },
+  {
+    "id": "car_069",
+    "make": "MG",
+    "model": "Gloster",
+    "variant": "Savvy 4x4",
+    "price": 4200000,
+    "fuelType": "Diesel",
+    "transmission": "Automatic",
+    "mileage": 12,
+    "safetyRating": 5,
+    "reviewScore": 4.5,
+    "seats": 7
+  },
+  {
+    "id": "car_070",
+    "make": "MG",
+    "model": "Comet EV",
+    "variant": "Play",
+    "price": 899000,
+    "fuelType": "Electric",
+    "transmission": "Automatic",
+    "mileage": 230,
+    "safetyRating": 4,
+    "reviewScore": 4.1,
+    "seats": 4
+  },
+  {
+    "id": "car_071",
+    "make": "Kia",
+    "model": "Carnival",
+    "variant": "Limousine Plus",
+    "price": 4790000,
+    "fuelType": "Diesel",
+    "transmission": "Automatic",
+    "mileage": 14,
+    "safetyRating": 5,
+    "reviewScore": 4.7,
+    "seats": 7
+  },
+  {
+    "id": "car_072",
+    "make": "Kia",
+    "model": "Syros",
+    "variant": "GTX+",
+    "price": 1650000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 18,
+    "safetyRating": 5,
+    "reviewScore": 4.4,
+    "seats": 5
+  },
+  {
+    "id": "car_073",
+    "make": "Skoda",
+    "model": "Kodiaq",
+    "variant": "L&K",
+    "price": 3990000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 15,
+    "safetyRating": 5,
+    "reviewScore": 4.6,
+    "seats": 7
+  },
+  {
+    "id": "car_074",
+    "make": "Skoda",
+    "model": "Superb",
+    "variant": "L&K",
+    "price": 3450000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 15,
+    "safetyRating": 5,
+    "reviewScore": 4.7,
+    "seats": 5
+  },
+  {
+    "id": "car_075",
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "variant": "R-Line",
+    "price": 3650000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 14,
+    "safetyRating": 5,
+    "reviewScore": 4.6,
+    "seats": 5
+  },
+  {
+    "id": "car_076",
+    "make": "Jeep",
+    "model": "Meridian",
+    "variant": "Limited O",
+    "price": 3850000,
+    "fuelType": "Diesel",
+    "transmission": "Automatic",
+    "mileage": 14,
+    "safetyRating": 5,
+    "reviewScore": 4.5,
+    "seats": 7
+  },
+  {
+    "id": "car_077",
+    "make": "Citroen",
+    "model": "Basalt",
+    "variant": "Shine Turbo",
+    "price": 1250000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 19,
+    "safetyRating": 4,
+    "reviewScore": 4.2,
+    "seats": 5
+  },
+  {
+    "id": "car_078",
+    "make": "Citroen",
+    "model": "C5 Aircross",
+    "variant": "Shine",
+    "price": 3350000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 15,
+    "safetyRating": 5,
+    "reviewScore": 4.4,
+    "seats": 5
+  },
+  {
+    "id": "car_079",
+    "make": "Renault",
+    "model": "Triber",
+    "variant": "RXZ Easy-R",
+    "price": 1050000,
+    "fuelType": "Petrol",
+    "transmission": "Manual",
+    "mileage": 19,
+    "safetyRating": 4,
+    "reviewScore": 4.1,
+    "seats": 7
+  },
+  {
+    "id": "car_080",
+    "make": "BYD",
+    "model": "Atto 3",
+    "variant": "Extended Range",
+    "price": 2490000,
+    "fuelType": "Electric",
+    "transmission": "Automatic",
+    "mileage": 521,
+    "safetyRating": 5,
+    "reviewScore": 4.6,
+    "seats": 5
+  },
+  {
+    "id": "car_081",
+    "make": "BYD",
+    "model": "Seal",
+    "variant": "Dynamic",
+    "price": 4990000,
+    "fuelType": "Electric",
+    "transmission": "Automatic",
+    "mileage": 650,
+    "safetyRating": 5,
+    "reviewScore": 4.7,
+    "seats": 5
+  },
+  {
+    "id": "car_082",
+    "make": "Honda",
+    "model": "CR-V",
+    "variant": "ZX",
+    "price": 4990000,
+    "fuelType": "Hybrid",
+    "transmission": "Automatic",
+    "mileage": 18,
+    "safetyRating": 5,
+    "reviewScore": 4.7,
+    "seats": 5
+  },
+  {
+    "id": "car_083",
+    "make": "Nissan",
+    "model": "X-Trail",
+    "variant": "Tekna",
+    "price": 3990000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 15,
+    "safetyRating": 5,
+    "reviewScore": 4.5,
+    "seats": 5
+  },
+  {
+    "id": "car_084",
+    "make": "Isuzu",
+    "model": "MUX",
+    "variant": "4x4 AT",
+    "price": 3850000,
+    "fuelType": "Diesel",
+    "transmission": "Automatic",
+    "mileage": 13,
+    "safetyRating": 5,
+    "reviewScore": 4.4,
+    "seats": 7
+  },
+  {
+    "id": "car_085",
+    "make": "BMW",
+    "model": "X1",
+    "variant": "M Sport",
+    "price": 4990000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 14,
+    "safetyRating": 5,
+    "reviewScore": 4.6,
+    "seats": 5
+  },
+  {
+    "id": "car_086",
+    "make": "BMW",
+    "model": "2 Series",
+    "variant": "M Sport",
+    "price": 4350000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 15,
+    "safetyRating": 5,
+    "reviewScore": 4.6,
+    "seats": 5
+  },
+  {
+    "id": "car_087",
+    "make": "BMW",
+    "model": "3 Series",
+    "variant": "M Sport",
+    "price": 4990000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 14,
+    "safetyRating": 5,
+    "reviewScore": 4.7,
+    "seats": 5
+  },
+  {
+    "id": "car_088",
+    "make": "Mercedes-Benz",
+    "model": "GLA",
+    "variant": "200",
+    "price": 4850000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 14,
+    "safetyRating": 5,
+    "reviewScore": 4.6,
+    "seats": 5
+  },
+  {
+    "id": "car_089",
+    "make": "Mercedes-Benz",
+    "model": "C-Class",
+    "variant": "200",
+    "price": 4990000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 14,
+    "safetyRating": 5,
+    "reviewScore": 4.7,
+    "seats": 5
+  },
+  {
+    "id": "car_090",
+    "make": "Audi",
+    "model": "Q3",
+    "variant": "Technology",
+    "price": 4450000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 13,
+    "safetyRating": 5,
+    "reviewScore": 4.6,
+    "seats": 5
+  },
+  {
+    "id": "car_091",
+    "make": "Audi",
+    "model": "A4",
+    "variant": "Technology",
+    "price": 4750000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 14,
+    "safetyRating": 5,
+    "reviewScore": 4.7,
+    "seats": 5
+  },
+  {
+    "id": "car_092",
+    "make": "Audi",
+    "model": "Q5",
+    "variant": "Premium Plus",
+    "price": 4990000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 13,
+    "safetyRating": 5,
+    "reviewScore": 4.7,
+    "seats": 5
+  },
+  {
+    "id": "car_093",
+    "make": "Volvo",
+    "model": "XC40",
+    "variant": "B4 Ultimate",
+    "price": 4950000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 14,
+    "safetyRating": 5,
+    "reviewScore": 4.6,
+    "seats": 5
+  },
+  {
+    "id": "car_094",
+    "make": "Volvo",
+    "model": "XC60",
+    "variant": "B5 Ultimate",
+    "price": 5000000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 13,
+    "safetyRating": 5,
+    "reviewScore": 4.7,
+    "seats": 5
+  },
+  {
+    "id": "car_095",
+    "make": "Lexus",
+    "model": "ES",
+    "variant": "300h Luxury",
+    "price": 5000000,
+    "fuelType": "Hybrid",
+    "transmission": "Automatic",
+    "mileage": 22,
+    "safetyRating": 5,
+    "reviewScore": 4.8,
+    "seats": 5
+  },
+  {
+    "id": "car_096",
+    "make": "Mini",
+    "model": "Cooper S",
+    "variant": "3-Door",
+    "price": 4500000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "mileage": 15,
+    "safetyRating": 5,
+    "reviewScore": 4.5,
+    "seats": 4
+  },
+  {
+    "id": "car_097",
+    "make": "Toyota",
+    "model": "Land Cruiser",
+    "variant": "ZX",
+    "price": 5000000,
+    "fuelType": "Diesel",
+    "transmission": "Automatic",
+    "mileage": 10,
+    "safetyRating": 5,
+    "reviewScore": 4.8,
+    "seats": 7
+  },
+  {
+    "id": "car_098",
+    "make": "Mahindra",
+    "model": "XUV700",
+    "variant": "AX7L",
+    "price": 2750000,
+    "fuelType": "Diesel",
+    "transmission": "Automatic",
+    "mileage": 14,
+    "safetyRating": 5,
+    "reviewScore": 4.6,
+    "seats": 7
+  },
+  {
+    "id": "car_099",
+    "make": "Hyundai",
+    "model": "Creta",
+    "variant": "Knight Diesel",
+    "price": 2250000,
+    "fuelType": "Diesel",
+    "transmission": "Automatic",
+    "mileage": 18,
+    "safetyRating": 5,
+    "reviewScore": 4.5,
+    "seats": 5
+  },
+  {
+    "id": "car_100",
+    "make": "Tata",
+    "model": "Nexon",
+    "variant": "Fearless+ Dark Diesel",
+    "price": 1850000,
+    "fuelType": "Diesel",
+    "transmission": "Automatic",
+    "mileage": 21,
+    "safetyRating": 5,
+    "reviewScore": 4.5,
+    "seats": 5
   }
 ]

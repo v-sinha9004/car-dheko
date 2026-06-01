@@ -51,17 +51,19 @@ function scoreUsage(car, prefs, budget) {
 }
 
 function scoreFamily(car, prefs) {
-  if (prefs.familySize >= 4 && car.reviewScore >= 4) {
-    return 5;
-  }
-  if (prefs.familySize >= 4) {
-    return 2;
-  }
+  if (car.seats < prefs.familySize) return 0;
+
+  if (prefs.familySize >= 6 && car.seats >= 7) return 8;
+  if (prefs.familySize >= 5 && car.seats >= 7) return 7;
+  if (prefs.familySize >= 4 && car.seats >= 7) return 6;
+  if (car.seats >= prefs.familySize && car.reviewScore >= 4) return 5;
+  if (car.seats >= prefs.familySize) return 3;
   return 0;
 }
 
 function passesHardFilters(car, prefs) {
   if (car.price > prefs.budget * BUDGET_BUFFER) return false;
+  if (car.seats < prefs.familySize) return false;
   if (prefs.fuelPreference !== 'Any' && car.fuelType !== prefs.fuelPreference) {
     return false;
   }
@@ -82,6 +84,11 @@ function buildReasons(car, prefs, breakdown) {
   }
   if (breakdown.safety >= 16) reasons.push('Strong safety rating');
   if (car.reviewScore >= 4.5) reasons.push('Highly rated by owners');
+  if (car.seats >= prefs.familySize && car.seats >= 7) {
+    reasons.push(`Fits ${prefs.familySize} with ${car.seats}-seater layout`);
+  } else if (car.seats >= prefs.familySize) {
+    reasons.push(`Seats ${car.seats} — fits your family of ${prefs.familySize}`);
+  }
   return reasons.slice(0, 4);
 }
 
@@ -90,7 +97,7 @@ export function scoreAndRankCars(cars, preferences, topN = 10) {
 
   if (filtered.length < 3) {
     const err = new Error(
-      'Not enough cars match your filters. Try increasing budget or setting fuel/transmission to Any.'
+      'Not enough cars match your filters. Try increasing budget, lowering family size, or setting fuel/transmission to Any.'
     );
     err.status = 400;
     throw err;
@@ -131,6 +138,7 @@ export function scoreAndRankCars(cars, preferences, topN = 10) {
     mileage: car.mileage,
     safetyRating: car.safetyRating,
     reviewScore: car.reviewScore,
+    seats: car.seats,
     ruleScore: score,
     ruleReasons: reasons,
   }));
