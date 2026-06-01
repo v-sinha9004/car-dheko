@@ -144,3 +144,43 @@ curl -X POST http://localhost:3001/api/recommend \
 - No seat/segment field in dataset — family size is context for Gemini only.
 - Single-page app — no routing.
 - Production: deploy client (Vercel/Netlify) + server (Render/Fly), env secrets, rate limiting on `/recommend`.
+
+## Project Reflection
+
+### What did you build and why? What did you deliberately cut?
+I built "Car Dheko", an AI-powered car buying copilot. The goal was to solve the overwhelming experience of choosing a car by combining deterministic hard filters (budget, fuel type, transmission) with AI-driven qualitative analysis (matching a car's features to specific user needs like safety or family size). 
+
+I deliberately cut:
+- User authentication and accounts (focus was on the core recommendation engine).
+- A real database (used a local `cars.json` to speed up development and keep setup simple).
+- Multi-page routing (kept it as a single-page app for the MVP).
+- Extensive test coverage and CI/CD pipelines.
+
+### What's your tech stack and why did you pick it?
+- **Frontend:** React (Vite) and Tailwind CSS v4. Picked for fast iteration, modern developer experience, and rapid UI styling without writing custom CSS.
+- **Backend:** Node.js with Express. Chosen for its simplicity in standing up a lightweight API layer and handling JSON requests/responses efficiently.
+- **AI:** Google Gemini API. Selected for its excellent structured JSON output capabilities, fast response times (Flash models), and generous free tier.
+- **Storage:** Local JSON file. Picked to completely avoid database setup overhead for a 2-3 hour MVP time box.
+
+### What did you delegate to AI tools vs. do manually? Where did the tools help most? Where did they get in the way?
+**Delegated to AI:**
+- Bootstrapping the React UI components and Tailwind styling layout.
+- Generating the initial rule-based filtering logic and scoring algorithms.
+- Drafting the complex system prompt for Gemini to ensure structured JSON output.
+- Generating the mock `cars.json` dataset.
+
+**Done manually:**
+- Designing the architecture (hybrid approach of local filtering + AI to prevent hallucinations).
+- Refining the scoring weights to ensure realistic results before sending candidates to Gemini.
+- Handling Gemini API fallback logic, retry mechanisms, and error states.
+- Connecting the frontend state to backend API endpoints and managing loading states.
+
+**Where tools helped most:** Scaffolding the UI, writing boilerplate Express server code, and rapidly iterating on the Gemini prompt structure.
+**Where they got in the way:** Sometimes AI would overcomplicate the filtering logic or hallucinate car models if not strictly constrained by the prompt. Fine-tuning the exact JSON schema response and fixing subtle API integration bugs required manual debugging.
+
+### If you had another 4 hours, what would you add?
+- **Visuals:** Integrate an external car image API to show visuals of the recommended cars (currently text-heavy).
+- **Testing:** Add unit tests for the filtering/scoring logic and integration tests for the Express API.
+- **Database & State:** Move data to PostgreSQL/MongoDB and add user sessions to save past shortlists.
+- **Detailed Views:** Add React Router for dedicated "Car Detail" pages showing full specs, price breakdowns, and user reviews.
+- **Robustness:** More robust fallback UI and graceful degradation if the Gemini API fails entirely or rate limits.
