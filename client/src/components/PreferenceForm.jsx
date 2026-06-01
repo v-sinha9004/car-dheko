@@ -32,6 +32,8 @@ export default function PreferenceForm({ onSubmit, disabled }) {
   const [makes, setMakes] = useState([]);
   const [selectedBrands, setSelectedBrands] = useState(new Set());
   const [brandsExpanded, setBrandsExpanded] = useState(false);
+  const [formExpanded, setFormExpanded] = useState(true);
+  const [collapsedSummary, setCollapsedSummary] = useState('');
 
   useEffect(() => {
     getMakes()
@@ -55,7 +57,7 @@ export default function PreferenceForm({ onSubmit, disabled }) {
     e.preventDefault();
     const form = new FormData(e.target);
     const { cityDriving, highwayDriving } = drivingFromUsage(form.get('usage'));
-    onSubmit({
+    const preferences = {
       budget,
       familySize: Number(form.get('familySize')),
       cityDriving,
@@ -65,7 +67,19 @@ export default function PreferenceForm({ onSubmit, disabled }) {
       safetyPriority: form.get('safetyPriority') === 'on',
       annualRunningKm,
       brands: [...selectedBrands],
-    });
+    };
+
+    const usageLabel = preferences.cityDriving ? 'City' : 'Highway';
+    const brandLabel =
+      preferences.brands.length === 0
+        ? 'All brands'
+        : `${preferences.brands.length} brand${preferences.brands.length === 1 ? '' : 's'}`;
+    setCollapsedSummary(
+      `${formatInr(preferences.budget)} · ${preferences.familySize} seats · ${preferences.fuelPreference} · ${preferences.transmission} · ${usageLabel} · ${brandLabel}`
+    );
+    setFormExpanded(false);
+    setBrandsExpanded(false);
+    onSubmit(preferences);
   };
 
   const fillDemo = () => {
@@ -73,6 +87,7 @@ export default function PreferenceForm({ onSubmit, disabled }) {
     setAnnualRunningKm(DEFAULT_PREFS.annualRunningKm);
     setSelectedBrands(new Set());
     setBrandsExpanded(false);
+    setFormExpanded(true);
 
     const form = document.getElementById('preference-form');
     if (!form) return;
@@ -87,17 +102,37 @@ export default function PreferenceForm({ onSubmit, disabled }) {
 
   return (
     <form id="preference-form" onSubmit={handleSubmit} className="space-y-6">
-      <div className="flex items-center justify-between">
-        <h2 className="text-xl font-semibold text-slate-800">Your preferences</h2>
+      <div className="flex items-center gap-3">
+        <button
+          type="button"
+          onClick={() => setFormExpanded((open) => !open)}
+          aria-expanded={formExpanded}
+          className="flex-1 flex items-center justify-between gap-2 min-w-0 text-left rounded-lg hover:bg-slate-50 px-1 py-0.5 -mx-1 transition"
+        >
+          <div className="min-w-0">
+            <h2 className="text-xl font-semibold text-slate-800">Your preferences</h2>
+            {!formExpanded && collapsedSummary && (
+              <p className="text-sm text-slate-500 truncate mt-0.5">{collapsedSummary}</p>
+            )}
+          </div>
+          <span
+            className={`text-slate-500 text-xs shrink-0 transition-transform ${formExpanded ? 'rotate-180' : ''}`}
+            aria-hidden
+          >
+            ▼
+          </span>
+        </button>
         <button
           type="button"
           onClick={fillDemo}
-          className="text-sm text-indigo-600 hover:text-indigo-800"
+          className="text-sm text-indigo-600 hover:text-indigo-800 shrink-0"
         >
           Reset
         </button>
       </div>
 
+      {formExpanded && (
+        <>
       <div>
         <label className="block text-sm font-medium text-slate-700 mb-1">
           Budget: <span>{formatInr(budget)}</span>
@@ -280,6 +315,8 @@ export default function PreferenceForm({ onSubmit, disabled }) {
       >
         Get recommendations
       </button>
+        </>
+      )}
     </form>
   );
 }
