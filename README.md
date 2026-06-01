@@ -1,5 +1,7 @@
 # Car Dheko — AI Car Buying Copilot
 
+**Live Demo:** [https://car-dheko-echm.vercel.app/](https://car-dheko-echm.vercel.app/)
+
 Help confused car buyers go from "I don't know what to buy" to a confident shortlist. The app combines **rule-based filtering/scoring** on a local car dataset with **Gemini** for ranked, explained recommendations.
 
 ## Architecture
